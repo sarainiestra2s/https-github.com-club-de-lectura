@@ -1,9 +1,26 @@
+// Definir un objeto para almacenar los eventos del club de lectura
+let eventosClubLectura = [];
 
+// Función para agregar un nuevo evento al calendario
+function agregarEvento(titulo, fecha, descripcion) {
+    let nuevoEvento = {
+        titulo: titulo,
+        fecha: fecha,
+        descripcion: descripcion
+    };
+    eventosClubLectura.push(nuevoEvento);
+}
 
-¡Bienvenido al Club de Lectura! Somos un grupo de entusiastas de la lectura que nos reunimos regularmente para explorar una amplia variedad de libros y compartir nuestras ideas y opiniones sobre ellos. Nuestro objetivo es fomentar la pasión por la lectura, crear un espacio de discusión abierto y diverso, y descubrir nuevas perspectivas a través de la literatura.
+// Función para mostrar todos los eventos en el calendario
+function mostrarEventos() {
+    console.log("Eventos del Club de Lectura:");
+    eventosClubLectura.forEach(evento => {
+        console.log(`- ${evento.titulo}: ${evento.fecha} - ${evento.descripcion}`);
+    });
+}
 
-Cada mes seleccionamos un libro diferente para leer, que abarca géneros diversos como la ficción contemporánea, la literatura clásica, la ciencia ficción, el ensayo, entre otros. Durante nuestras reuniones, discutimos los temas, personajes, estilo de escritura y cualquier otro aspecto relevante del libro seleccionado. Además, estamos abiertos a sugerencias y recomendaciones de lectura por parte de nuestros miembros.
+// Ejemplos de uso
+agregarEvento("Reunión Mensual", "15 de mayo de 2024", "Discusión del libro del mes.");
+agregarEvento("Visita del Autor", "25 de mayo de 2024", "Charla y firma de libros con el autor invitado.");
+mostrarEventos();
 
-No importa si eres un lector ávido o estás buscando explorar nuevos géneros y autores, ¡todos son bienvenidos a unirse a nuestras conversaciones literarias!
-
----
